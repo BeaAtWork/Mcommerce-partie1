@@ -6,10 +6,13 @@ import org.hibernate.validator.constraints.Length;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 
 @Entity
-//@JsonFilter("monFiltreDynamique")
+@JsonFilter("monFiltreDynamique")
 public class Product {
 
     @Id
@@ -23,18 +26,23 @@ public class Product {
     private int prix;
 
     //information que nous ne souhaitons pas exposer
+    @NotNull
     private int prixAchat;
+
+    @NotNull
+    private int marge;
 
     //constructeur par défaut
     public Product() {
     }
 
     //constructeur pour nos tests
-    public Product(int id, String nom, int prix, int prixAchat) {
+    public Product(int id, String nom, int prix, int prixAchat, int marge) {
         this.id = id;
         this.nom = nom;
         this.prix = prix;
         this.prixAchat = prixAchat;
+        this.marge=marge;
     }
 
     public int getId() {
@@ -69,12 +77,20 @@ public class Product {
         this.prixAchat = prixAchat;
     }
 
+    public int getMarge() {
+        return marge;
+    }
+
+    public void setMarge(int marge) {
+        this.marge = marge;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
                 "id=" + id +
                 ", nom='" + nom + '\'' +
                 ", prix=" + prix +
-                '}';
+                "}:"+marge;
     }
 }
