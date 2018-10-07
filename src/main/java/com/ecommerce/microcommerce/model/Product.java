@@ -42,7 +42,7 @@ public class Product {
         this.nom = nom;
         this.prix = prix;
         this.prixAchat = prixAchat;
-        this.marge=marge;
+
     }
 
     public int getId() {
@@ -77,13 +77,7 @@ public class Product {
         this.prixAchat = prixAchat;
     }
 
-    public int getMarge() {
-        return marge;
-    }
 
-    public void setMarge(int marge) {
-        this.marge = marge;
-    }
 
     @Override
     public String toString() {
@@ -91,6 +85,6 @@ public class Product {
                 "id=" + id +
                 ", nom='" + nom + '\'' +
                 ", prix=" + prix +
-                "}:"+marge;
+                "}";
     }
 }

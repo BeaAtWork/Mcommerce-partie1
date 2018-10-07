@@ -1,6 +1,7 @@
 package com.ecommerce.microcommerce.web.controller;
 
 import com.ecommerce.microcommerce.dao.ProductDao;
+import com.ecommerce.microcommerce.model.Marge;
 import com.ecommerce.microcommerce.model.Product;
 import com.ecommerce.microcommerce.web.exceptions.ProduitIntrouvableException;
 import com.fasterxml.jackson.databind.ser.FilterProvider;
@@ -17,11 +18,12 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 
-@Api(description = "API pour es opérations CRUD sur les produits.")
+@Api(description = "API pour les opérations CRUD sur les produits.")
 
 @RestController
 public class ProductController {
@@ -54,7 +56,7 @@ public class ProductController {
         Product produit = productDao.findById(id);
 
         if (produit == null)
-            throw new ProduitIntrouvableException("Le produit avec l'id " + id + " est INTROUVABLE. Écran Bleu si je pouvais.");
+            throw new ProduitIntrouvableException("Le produit avec l'id " + id + " est INTROUVABLE.");
 
         FilterProvider listDeNosFiltres = new SimpleFilterProvider().addFilter("monFiltreDynamique", monFiltre);
         MappingJacksonValue produitsFiltres = new MappingJacksonValue(produit);
@@ -102,11 +104,15 @@ public class ProductController {
     }
 
 
-    //Récupérer la marge des produits
-    @ApiOperation(value = "Récupère la marge d'un produit grâce à son ID à condition que celui-ci soit en stock!")
-    @GetMapping(value = "/adminProduits")
 
+    //Récupérer la marge des produits
+    @ApiOperation(value = "Récupère la marge des produits")
+    @GetMapping(value = "/adminProduits")
     public MappingJacksonValue adminProduits() {
+
+        List<Marge> listeMarges = new ArrayList<>();
+        int marge = 0;
+
         SimpleBeanPropertyFilter monFiltre = SimpleBeanPropertyFilter.serializeAll();
         Iterable<Product> produits = productDao.findAll();
         if (produits == null)
@@ -115,11 +121,11 @@ public class ProductController {
         Iterator it = produits.iterator();
         while (it.hasNext()) {
             Product produit = (Product) it.next();
-            int marge = (produit.getPrix() - produit.getPrixAchat());
-            produit.setMarge(marge);
+            marge = (produit.getPrix() - produit.getPrixAchat());
+            listeMarges.add(new Marge(produit, marge));
         }
         FilterProvider listDeNosFiltres = new SimpleFilterProvider().addFilter("monFiltreDynamique", monFiltre);
-        MappingJacksonValue produitsMapppes = new MappingJacksonValue(produits);
+        MappingJacksonValue produitsMapppes = new MappingJacksonValue(listeMarges);
         produitsMapppes.setFilters(listDeNosFiltres);
 
         return produitsMapppes;
