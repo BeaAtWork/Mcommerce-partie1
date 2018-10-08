@@ -86,8 +86,17 @@ public class ProductController {
 
     @DeleteMapping(value = "/Produits/{id}")
 
-    public void supprimerProduit(@PathVariable int id) {
+    public void supprimerUnProduit(@PathVariable int id) {
+
+        if (productDao.findById(id) == null)
+            throw new ProduitIntrouvableException("Le produit avec l'id " + id + " n'existe pas.");
         productDao.delete(id);
+    }
+
+    @DeleteMapping(value = "/Produits")
+
+    public void supprimerProduits() {
+        productDao.deleteAll();
     }
 
     @PutMapping(value = "/Produits")
@@ -100,7 +109,7 @@ public class ProductController {
     //Pour les tests
     @GetMapping(value = "test/produits/{prix}")
     public List<Product> testeDeRequetes(@PathVariable int prix) {
-        return productDao.chercherUnProduitCher(400);
+        return productDao.chercherUnProduitCher(prix);
     }
 
 
