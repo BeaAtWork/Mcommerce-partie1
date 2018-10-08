@@ -6,7 +6,7 @@
   },
   "item": [
     {
-      "name": "Ajouter Ordinateur",
+      "name": "Ajouter Ordi portable",
       "request": {
         "method": "POST",
         "header": [
@@ -30,7 +30,7 @@
             "ajouterProduit"
           ]
         },
-        "description": "Ajouter produit 1"
+        "description": "Ajouter Ordi portable"
       },
       "response": []
     },
@@ -64,7 +64,7 @@
       "response": []
     },
     {
-      "name": "Ajouter table de ping pong",
+      "name": "Ajouter table ping pong",
       "request": {
         "method": "POST",
         "header": [
@@ -87,8 +87,7 @@
           "path": [
             "ajouterProduit"
           ]
-        },
-        "description": "Ajouter produit 3"
+        }
       },
       "response": []
     },

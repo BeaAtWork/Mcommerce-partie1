@@ -1,8 +1,8 @@
 {
-  "id": "a899bd15-7529-447b-8191-749d6addd726",
+  "id": "522ccaf8-08c7-465f-8bd2-070ba28411ef",
   "name": "Test_microservice",
   "allTests": [],
-  "timestamp": "2018-10-08T19:53:11.952Z",
+  "timestamp": "2018-10-08T20:45:26.228Z",
   "collection_id": "e1307494-63fe-42ec-891e-33079450840e",
   "folder_id": 0,
   "target_type": "collection",
@@ -18,9 +18,9 @@
     "events": null,
     "variables": null,
     "order": [
-      "e32604e5-7597-4929-a5f4-6dcb1ddb47f0",
+      "68f5099f-215a-4223-adca-51bc97ec8e8e",
       "8f7a6bf0-36ba-48f6-95b5-56dbf65d1d8e",
-      "247deee2-05e6-4b59-8696-0892a1d84cae",
+      "318324a1-a3dc-4e73-b056-503f85e6809c",
       "02eaa7e8-e389-4f6f-82f2-d0b9c131ebf9",
       "d445f73f-0891-44b6-9d6e-f95ab6bb8ed6",
       "5251167f-a525-44ef-b21e-11233048ac5b",
@@ -55,8 +55,8 @@
   ],
   "results": [
     {
-      "name": "Ajouter Ordinateur",
-      "id": "e32604e5-7597-4929-a5f4-6dcb1ddb47f0",
+      "name": "Ajouter Ordi portable",
+      "id": "68f5099f-215a-4223-adca-51bc97ec8e8e",
       "url": "http://localhost:9090/ajouterProduit",
       "totalTime": 0,
       "responseCode": {
@@ -69,13 +69,13 @@
       },
       "testPassFailCounts": {},
       "times": [
-        "1326"
+        "1501"
       ],
       "allTests": [
         {}
       ],
-      "time": "1326",
-      "totalRequestTime": "1326",
+      "time": "1501",
+      "totalRequestTime": "1501",
       "iterationResults": {}
     },
     {
@@ -93,18 +93,42 @@
       },
       "testPassFailCounts": {},
       "times": [
-        "56"
+        "65"
       ],
       "allTests": [
         {}
       ],
-      "time": "56",
-      "totalRequestTime": "56",
+      "time": "65",
+      "totalRequestTime": "65",
       "iterationResults": {}
     },
     {
-      "name": "Ajouter table de ping pong",
-      "id": "247deee2-05e6-4b59-8696-0892a1d84cae",
+      "name": "Ajouter table ping pong",
+      "id": "318324a1-a3dc-4e73-b056-503f85e6809c",
+      "url": "http://localhost:9090/ajouterProduit",
+      "totalTime": 0,
+      "responseCode": {
+        "code": 201,
+        "name": "Created",
+        "detail": {
+          "name": "Created",
+          "detail": "The request has been fulfilled and resulted in a new resource being created."
+        }
+      },
+      "testPassFailCounts": {},
+      "times": [
+        "26"
+      ],
+      "allTests": [
+        {}
+      ],
+      "time": "26",
+      "totalRequestTime": "26",
+      "iterationResults": {}
+    },
+    {
+      "name": "Ajouter cheval de bois",
+      "id": "02eaa7e8-e389-4f6f-82f2-d0b9c131ebf9",
       "url": "http://localhost:9090/ajouterProduit",
       "totalTime": 0,
       "responseCode": {
@@ -127,30 +151,6 @@
       "iterationResults": {}
     },
     {
-      "name": "Ajouter cheval de bois",
-      "id": "02eaa7e8-e389-4f6f-82f2-d0b9c131ebf9",
-      "url": "http://localhost:9090/ajouterProduit",
-      "totalTime": 0,
-      "responseCode": {
-        "code": 201,
-        "name": "Created",
-        "detail": {
-          "name": "Created",
-          "detail": "The request has been fulfilled and resulted in a new resource being created."
-        }
-      },
-      "testPassFailCounts": {},
-      "times": [
-        "21"
-      ],
-      "allTests": [
-        {}
-      ],
-      "time": "21",
-      "totalRequestTime": "21",
-      "iterationResults": {}
-    },
-    {
       "name": "Liste des produit triés",
       "id": "d445f73f-0891-44b6-9d6e-f95ab6bb8ed6",
       "url": "http://localhost:9090/produitsTries",
@@ -165,13 +165,13 @@
       },
       "testPassFailCounts": {},
       "times": [
-        "409"
+        "417"
       ],
       "allTests": [
         {}
       ],
-      "time": "409",
-      "totalRequestTime": "409",
+      "time": "417",
+      "totalRequestTime": "417",
       "iterationResults": {}
     },
     {
@@ -189,13 +189,13 @@
       },
       "testPassFailCounts": {},
       "times": [
-        "313"
+        "250"
       ],
       "allTests": [
         {}
       ],
-      "time": "313",
-      "totalRequestTime": "313",
+      "time": "250",
+      "totalRequestTime": "250",
       "iterationResults": {}
     },
     {
@@ -213,13 +213,13 @@
       },
       "testPassFailCounts": {},
       "times": [
-        "73"
+        "98"
       ],
       "allTests": [
         {}
       ],
-      "time": "73",
-      "totalRequestTime": "73",
+      "time": "98",
+      "totalRequestTime": "98",
       "iterationResults": {}
     },
     {
@@ -237,13 +237,13 @@
       },
       "testPassFailCounts": {},
       "times": [
-        "71"
+        "48"
       ],
       "allTests": [
         {}
       ],
-      "time": "71",
-      "totalRequestTime": "71",
+      "time": "48",
+      "totalRequestTime": "48",
       "iterationResults": {}
     },
     {
@@ -261,13 +261,13 @@
       },
       "testPassFailCounts": {},
       "times": [
-        "104"
+        "170"
       ],
       "allTests": [
         {}
       ],
-      "time": "104",
-      "totalRequestTime": "104",
+      "time": "170",
+      "totalRequestTime": "170",
       "iterationResults": {}
     },
     {
@@ -285,13 +285,13 @@
       },
       "testPassFailCounts": {},
       "times": [
-        "22"
+        "29"
       ],
       "allTests": [
         {}
       ],
-      "time": "22",
-      "totalRequestTime": "22",
+      "time": "29",
+      "totalRequestTime": "29",
       "iterationResults": {}
     },
     {
@@ -309,13 +309,13 @@
       },
       "testPassFailCounts": {},
       "times": [
-        "122"
+        "134"
       ],
       "allTests": [
         {}
       ],
-      "time": "122",
-      "totalRequestTime": "122",
+      "time": "134",
+      "totalRequestTime": "134",
       "iterationResults": {}
     },
     {
@@ -333,26 +333,26 @@
       },
       "testPassFailCounts": {},
       "times": [
-        "18"
+        "28"
       ],
       "allTests": [
         {}
       ],
-      "time": "18",
-      "totalRequestTime": "18",
+      "time": "28",
+      "totalRequestTime": "28",
       "iterationResults": {}
     }
   ],
   "totalPass": 0,
   "totalFail": 0,
-  "totalTime": 2560,
+  "totalTime": 2791,
   "lifecycle": "done",
   "requests": [
     {
-      "name": "Ajouter Ordinateur",
-      "id": "e32604e5-7597-4929-a5f4-6dcb1ddb47f0",
+      "name": "Ajouter Ordi portable",
+      "id": "68f5099f-215a-4223-adca-51bc97ec8e8e",
       "url": "http://localhost:9090/ajouterProduit",
-      "time": "2018-10-08T19:53:11.952Z",
+      "time": "2018-10-08T20:45:26.228Z",
       "responseCode": {
         "code": 201,
         "name": "Created",
@@ -367,7 +367,7 @@
       "name": "Ajouter aspirateur",
       "id": "8f7a6bf0-36ba-48f6-95b5-56dbf65d1d8e",
       "url": "http://localhost:9090/ajouterProduit",
-      "time": "2018-10-08T19:53:11.952Z",
+      "time": "2018-10-08T20:45:26.228Z",
       "responseCode": {
         "code": 201,
         "name": "Created",
@@ -379,10 +379,10 @@
       "testPassFailCounts": {}
     },
     {
-      "name": "Ajouter table de ping pong",
-      "id": "247deee2-05e6-4b59-8696-0892a1d84cae",
+      "name": "Ajouter table ping pong",
+      "id": "318324a1-a3dc-4e73-b056-503f85e6809c",
       "url": "http://localhost:9090/ajouterProduit",
-      "time": "2018-10-08T19:53:11.952Z",
+      "time": "2018-10-08T20:45:26.228Z",
       "responseCode": {
         "code": 201,
         "name": "Created",
@@ -397,7 +397,7 @@
       "name": "Ajouter cheval de bois",
       "id": "02eaa7e8-e389-4f6f-82f2-d0b9c131ebf9",
       "url": "http://localhost:9090/ajouterProduit",
-      "time": "2018-10-08T19:53:11.952Z",
+      "time": "2018-10-08T20:45:26.228Z",
       "responseCode": {
         "code": 201,
         "name": "Created",
@@ -412,7 +412,7 @@
       "name": "Liste des produit triés",
       "id": "d445f73f-0891-44b6-9d6e-f95ab6bb8ed6",
       "url": "http://localhost:9090/produitsTries",
-      "time": "2018-10-08T19:53:11.952Z",
+      "time": "2018-10-08T20:45:26.228Z",
       "responseCode": {
         "code": 200,
         "name": "OK",
@@ -427,7 +427,7 @@
       "name": "Produts plus chers que 400",
       "id": "5251167f-a525-44ef-b21e-11233048ac5b",
       "url": "http://localhost:9090/test/produits/400",
-      "time": "2018-10-08T19:53:11.952Z",
+      "time": "2018-10-08T20:45:26.228Z",
       "responseCode": {
         "code": 200,
         "name": "OK",
@@ -442,7 +442,7 @@
       "name": "Produts plus chers que 500",
       "id": "c25fd596-641e-425e-8e27-a2eabef0122a",
       "url": "http://localhost:9090/test/produits/500",
-      "time": "2018-10-08T19:53:11.952Z",
+      "time": "2018-10-08T20:45:26.228Z",
       "responseCode": {
         "code": 200,
         "name": "OK",
@@ -457,7 +457,7 @@
       "name": "Chercher produit 3",
       "id": "9aea6ba8-5f8b-447a-bfcc-c2ee0569cc99",
       "url": "http://localhost:9090/Produits/3",
-      "time": "2018-10-08T19:53:11.952Z",
+      "time": "2018-10-08T20:45:26.228Z",
       "responseCode": {
         "code": 200,
         "name": "OK",
@@ -472,7 +472,7 @@
       "name": "Mise à jour prix Ordinateur",
       "id": "76ad17a1-9aa6-4a7a-b0f3-ce1d2afcd67f",
       "url": "http://localhost:9090/Produits",
-      "time": "2018-10-08T19:53:11.952Z",
+      "time": "2018-10-08T20:45:26.228Z",
       "responseCode": {
         "code": 200,
         "name": "OK",
@@ -487,7 +487,7 @@
       "name": "Supprimer produit 3",
       "id": "4334a554-0aa4-45bf-a923-0c5ce94030f3",
       "url": "http://localhost:9090/Produits/3",
-      "time": "2018-10-08T19:53:11.952Z",
+      "time": "2018-10-08T20:45:26.228Z",
       "responseCode": {
         "code": 200,
         "name": "OK",
@@ -502,7 +502,7 @@
       "name": "Afficher les marges",
       "id": "daef0b14-4016-4867-abc6-a6c403f969dd",
       "url": "http://localhost:9090/adminProduits",
-      "time": "2018-10-08T19:53:11.952Z",
+      "time": "2018-10-08T20:45:26.228Z",
       "responseCode": {
         "code": 200,
         "name": "OK",
@@ -517,7 +517,7 @@
       "name": "Supprimer tous les produits",
       "id": "c7ae22db-a68e-47fb-9d9e-7ecfe3bf4393",
       "url": "http://localhost:9090/Produits",
-      "time": "2018-10-08T19:53:11.952Z",
+      "time": "2018-10-08T20:45:26.228Z",
       "responseCode": {
         "code": 200,
         "name": "OK",
