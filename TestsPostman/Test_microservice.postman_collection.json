@@ -1,0 +1,363 @@
+{
+  "info": {
+    "_postman_id": "e1307494-63fe-42ec-891e-33079450840e",
+    "name": "Test_microservice",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Ajouter Ordinateur",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n        \"id\": 1,\n        \"nom\": \"Ordinateur portable\",\n        \"prix\": 350,\n        \"prixAchat\":120\n    }"
+        },
+        "url": {
+          "raw": "http://localhost:9090/ajouterProduit",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "ajouterProduit"
+          ]
+        },
+        "description": "Ajouter produit 1"
+      },
+      "response": []
+    },
+    {
+      "name": "Ajouter aspirateur",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 2,\r\n  \"nom\": \"Aspirateur Robot\",\r\n  \"prix\": 500,\r\n  \"prixAchat\":200\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9090/ajouterProduit",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "ajouterProduit"
+          ]
+        },
+        "description": "Ajouter produit 2"
+      },
+      "response": []
+    },
+    {
+      "name": "Ajouter table de ping pong",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 3,\r\n  \"nom\": \"Table de ping pong\",\r\n  \"prix\": 750,\r\n  \"prixAchat\":400\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9090/ajouterProduit",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "ajouterProduit"
+          ]
+        },
+        "description": "Ajouter produit 3"
+      },
+      "response": []
+    },
+    {
+      "name": "Ajouter cheval de bois",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 4,\r\n  \"nom\": \"Poney en bois\",\r\n  \"prix\": 145,\r\n  \"prixAchat\":100\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9090/ajouterProduit",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "ajouterProduit"
+          ]
+        },
+        "description": "Ajouter produit 2"
+      },
+      "response": []
+    },
+    {
+      "name": "Liste des produit triés",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 3,\r\n  \"nom\": \"Cheval de bois\",\r\n  \"prix\": 150,\r\n  \"prixAchat\":80\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9090/produitsTries",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "produitsTries"
+          ]
+        },
+        "description": "produits triés"
+      },
+      "response": []
+    },
+    {
+      "name": "Produts plus chers que 400",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 3,\r\n  \"nom\": \"Cheval de bois\",\r\n  \"prix\": 150,\r\n  \"prixAchat\":80\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9090/test/produits/400",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "test",
+            "produits",
+            "400"
+          ]
+        },
+        "description": "test produit prix sup à 400"
+      },
+      "response": []
+    },
+    {
+      "name": "Produts plus chers que 500",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 3,\r\n  \"nom\": \"Cheval de bois\",\r\n  \"prix\": 150,\r\n  \"prixAchat\":80\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9090/test/produits/500",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "test",
+            "produits",
+            "500"
+          ]
+        },
+        "description": "test produit prix sup à 200\n"
+      },
+      "response": []
+    },
+    {
+      "name": "Chercher produit 3",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 1,\r\n  \"nom\": \"Ordinateur portable\",\r\n  \"prix\": 460,\r\n  \"prixAchat\":280\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9090/Produits/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "Produits",
+            "3"
+          ]
+        },
+        "description": "Voir produit 3"
+      },
+      "response": []
+    },
+    {
+      "name": "Mise à jour prix Ordinateur",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 1,\r\n  \"nom\": \"Ordinateur portable\",\r\n  \"prix\": 460,\r\n  \"prixAchat\":280\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9090/Produits",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "Produits"
+          ]
+        },
+        "description": "Modifier produit 1"
+      },
+      "response": []
+    },
+    {
+      "name": "Supprimer produit 3",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:9090/Produits/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "Produits",
+            "3"
+          ]
+        },
+        "description": "Supprimer produit 3"
+      },
+      "response": []
+    },
+    {
+      "name": "Afficher les marges",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 3,\r\n  \"nom\": \"Cheval de bois\",\r\n  \"prix\": 150,\r\n  \"prixAchat\":80\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:9090/adminProduits",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "adminProduits"
+          ]
+        },
+        "description": "calcul de la marge"
+      },
+      "response": []
+    },
+    {
+      "name": "Supprimer tous les produits",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:9090/Produits",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "Produits"
+          ]
+        },
+        "description": "Supprimer produit 3"
+      },
+      "response": []
+    }
+  ]
+}
