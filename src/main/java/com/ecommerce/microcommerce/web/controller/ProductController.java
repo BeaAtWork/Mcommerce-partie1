@@ -3,6 +3,7 @@ package com.ecommerce.microcommerce.web.controller;
 import com.ecommerce.microcommerce.dao.ProductDao;
 import com.ecommerce.microcommerce.model.Marge;
 import com.ecommerce.microcommerce.model.Product;
+import com.ecommerce.microcommerce.web.exceptions.ProduitGratuitException;
 import com.ecommerce.microcommerce.web.exceptions.ProduitIntrouvableException;
 import com.fasterxml.jackson.databind.ser.FilterProvider;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
@@ -57,6 +58,9 @@ public class ProductController {
 
         if (produit == null)
             throw new ProduitIntrouvableException("Le produit avec l'id " + id + " est INTROUVABLE.");
+
+        if (produit.getPrix() <= 1)
+            throw new ProduitGratuitException("Le produit avec l'id " + id + " a un prix égal à 0.");
 
         FilterProvider listDeNosFiltres = new SimpleFilterProvider().addFilter("monFiltreDynamique", monFiltre);
         MappingJacksonValue produitsFiltres = new MappingJacksonValue(produit);
